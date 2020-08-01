@@ -1,6 +1,6 @@
-# boilerplate-lib-ts
+# SORTING ALGORITHMS
 ## Description
-JINN lib boilerplate
+Sorting algorithms implementation
 ## Overview
 
 ### Directory structure
@@ -15,11 +15,7 @@ TBA
 __Example:__
 
 ```typescript
-import * as Thicker from 'thicker'
-
-// will return a random float between 0 and 100
-const randomPoint = Thicker.Random.randomFloat(0,100)
-
+TBA
 ```
 ### Features
 TBA
