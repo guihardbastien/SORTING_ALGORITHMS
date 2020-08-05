@@ -1,9 +1,8 @@
 import * as Utils from './utils/index';
 
 const array: number[] = [0, 12, 4, 6, 8, 5, 2, 3];
-const test = mergeSort(array);
+const test = quickSort(array, 0, array.length - 1);
 console.log(test);
-
 /**
  * Insertion sort
  */
@@ -31,10 +30,7 @@ export function selectionSort(arr: number[]) {
                 minimumIndex = j;
             }
         }
-        // swap
-        const temp = arr[minimumIndex];
-        arr[minimumIndex] = arr[i];
-        arr[i] = temp;
+        Utils.swap(arr, minimumIndex, i);
     }
     return arr;
 }
@@ -54,22 +50,28 @@ export function mergeSort(arr: number[]): any {
  * Heapsort
  */
 export function heapSort(arr: number[]) {
-    return arr;
-}
-
-/**
- * Shellsort
- */
-export function shellSort(arr: number[]) {
-    return arr;
+    let maxHeap = Utils.buildMaxHeap(arr);
+    let lastElt = arr.length - 1;
+    while (lastElt > 0) {
+        maxHeap = Utils.swap(maxHeap, 0, lastElt);
+        maxHeap = Utils.heapify(maxHeap, 0, lastElt);
+        lastElt -= 1;
+    }
+    return maxHeap;
 }
 
 /**
  * Quicksort
  */
-export function quickSort(arr: number[]) {
-    return arr;
+export function quickSort(arr: number[], low:number, high:number) {
+    if (low < high) {
+        const partitionIndex = Utils.partition(arr, low, high);
+        quickSort(arr, low, partitionIndex - 1);
+        quickSort(arr, partitionIndex + 1, high);
+        return arr;
+    }
 }
+
 /**
  * Bubble sort
  */
