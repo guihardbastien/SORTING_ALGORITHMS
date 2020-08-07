@@ -2,7 +2,7 @@
 ## Description
 Sorting algorithms implementation
 ## Overview
-!(sorting_hat)[https://media.giphy.com/media/N3tNKBmQR3K2k/source.gif]
+![sorting_hat](https://media.giphy.com/media/N3tNKBmQR3K2k/source.gif)
 ### Directory structure
 ```bash
 .
