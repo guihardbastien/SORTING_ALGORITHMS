@@ -1,6 +1,6 @@
 {
-	"name": "sorting_algorithms",
-	"version": "0.1.0",
+	"name": "@guihardbastien/sorting-algorithms",
+	"version": "1.0.0",
 	"description": "Sorting algorithms package, educational purpose.",
 	"keywords": [
 		"lib"
